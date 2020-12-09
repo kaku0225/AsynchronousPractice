@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>06 - fetch first post</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="max-w-3xl mx-auto px-4 border-solid border-1 border-gray-600 sm:px-6 xl:max-w-5xl xl:px-0">
+      <h1 class="text-2xl font-extrabold text-center py-10">
+        Random Post
+      </h1>
+    </div>
+    <div class="max-w-3xl mx-auto px-4 divide-y divide-gray-200 sm:px-6 xl:max-w-5xl xl:px-0">
+      <div class="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
+        <div class="text-base leading-6 font-medium text-gray-500 xl:mr-4">
+          <span class="post-created-at">
+            <!-- post.create_at -->
+          </span>
+          <br class="hidden xl:inline" />
+          <span class="mx-2 inline xl:hidden">|</span>
+          <span class="post-author">
+            <!-- post.author -->
+          </span>
+        </div>
+        <div class="space-y-5 xl:col-span-3">
+          <div class="space-y-6">
+            <h2 class="text-2xl leading-8 font-bold">
+              <a target="_blank" class="post-title text-gray-900" href="#">
+                <!-- post.title -->
+                Loading...
+              </a>
+            </h2>
+            <div class="post-description max-w-none text-gray-500">
+              <!-- post.description -->
+            </div>
+          </div>
+          <div class="text-base leading-6 font-medium">
+            <a target="_blank" class="post-link text-red-600 hover:text-red-400 hidden" href="#">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

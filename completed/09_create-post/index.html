@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>09 - create post</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="main.js"></script>
+    <style>
+      button[type=submit].loading {
+        background: linear-gradient(0deg, #3182ce, #3182ce, #204365, #204365, #3182ce, #3182ce);
+        background-size: 100% 600%;
+        animation: submit-loading 1s linear infinite;
+      }
+      @keyframes submit-loading {
+        0% { background-position: 0% 0%; }
+        100% { background-position: 0% 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="max-w-xl mx-auto px-4 border-solid border-1 border-gray-600 sm:px-6 xl:px-0">
+      <h1 class="text-2xl font-extrabold text-center py-10">
+        Create Post
+      </h1>
+    </div>
+    <form id="create-post-form" class="max-w-xl mx-auto px-4 pb-6 divide-y divide-gray-200 sm:px-6 xl:px-0">
+      <div class="flex flex-col text-sm my-3">
+        <label for="title" class="font-bold mb-2">Title<span class="error text-sm text-red-600 ml-2"></span></label>
+        <input name="title" id="title" class="appearance-none border border-gray-200 p-2 focus:outline-none focus:border-gray-500" type="text" placeholder="Enter title">
+      </div>
+
+      <div class="flex flex-col text-sm my-3">
+        <label for="author" class="font-bold mb-2">Author<span class="error text-sm text-red-600 ml-2"></span></label>
+        <input name="author" id="author" class="appearance-none border border-gray-200 p-2 focus:outline-none focus:border-gray-500" type="text" placeholder="Enter author">
+      </div>
+
+      <div class="flex flex-col text-sm my-3">
+        <label for="description" class="font-bold mb-2">Description<span class="error text-sm text-red-600 ml-2"></span></label>
+        <input name="description" id="description" class="appearance-none border border-gray-200 p-2 focus:outline-none focus:border-gray-500" type="text" placeholder="Enter description">
+      </div>
+
+      <div class="text-sm flex flex-col my-3">
+        <label for="content" class="font-bold mt-4 mb-2">Content<span class="error text-sm text-red-600 ml-2"></span></label>
+        <textarea name="content" id="content" class="appearance-none w-full border border-gray-200 p-2 h-40 focus:outline-none focus:border-gray-500"  placeholder="Enter content"></textarea>
+      </div>
+
+       <button type="submit" class="w-full bg-blue-600 shadow-lg text-white px-4 py-2 hover:bg-blue-400 my-4 text-center font-semibold focus:outline-none">Submit</button>
+    </form>
+  </body>
+</html>
